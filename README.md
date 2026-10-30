@@ -28,7 +28,10 @@ AIエンジニアリング実践講座（AIE2026）の演習と宿題で使う�
 ```bash
 uv run pytest -q
 uv run python -m app.ask "LoRAとは何ですか？"
+uv run python -m app.ask --chat
 ```
+
+`--chat` では質問を続けて入力できます。`/exit` または `/quit` で終了します。会話が5往復に達すると古い履歴を要約に置き換え、直近4往復を保持します。
 
 詳しい手順は [lectures/01/problem.md](lectures/01/problem.md) を見てください。
 
